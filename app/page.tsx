@@ -6,7 +6,7 @@ import copy from "copy-to-clipboard"
 import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const API_URL = 'http://localhost:1998'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1998'
 
 export default function Home() {
     const [file, setFile] = useState<File | null>(null)
